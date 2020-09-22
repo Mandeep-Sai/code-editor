@@ -1,0 +1,48 @@
+body {
+  margin: 0px;
+}
+.top {
+  background-color: hsl(225, 6%, 25%);
+  height: 50vh;
+  display: flex;
+}
+.editorContainer {
+  flex-grow: 1;
+  flex-basis: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  background-color: hsl(225, 6%, 25%);
+}
+.editorContainer.collapsed {
+  flex-grow: 0;
+}
+.editorContainer.collapsed .CodeMirror-scroll {
+  position: absolute;
+  overflow: hidden !important;
+}
+.editorContainer button {
+  background: none;
+  border: none;
+  color: white !important;
+  font-size: 20px;
+}
+.editorContainer button:focus {
+  outline: none;
+  cursor: pointer;
+}
+.editorTitle {
+  display: flex;
+  justify-content: space-between;
+  background-color: hsl(225, 6%, 13%);
+  color: white;
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
+  border-top-right-radius: 0.5rem;
+  border-top-left-radius: 0.5rem;
+}
+.code-mirror-wrapper {
+  flex-grow: 1;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  overflow: hidden;
+}
